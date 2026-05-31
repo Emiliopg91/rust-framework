@@ -1,6 +1,6 @@
 [package]
 name = "fwkarq"
-version = "1.1.2"
+version = "1.1.3"
 edition = "2024"
 description = "Basic framework for project scaffolding"
 license = "MIT OR Apache-2.0"
@@ -35,4 +35,4 @@ opt-level = 3
 
 [features]
 default = []
-macros = ["fwkarq_macro_rules"]
+macros_rules = ["fwkarq_macro_rules"]
