@@ -6,6 +6,3 @@ pub mod settings;
 pub mod shell;
 pub mod translator;
 pub mod utils;
-
-#[cfg(feature = "macros")]
-pub use fwkarq_macros::*;

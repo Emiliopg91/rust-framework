@@ -271,11 +271,10 @@ dependencies = [
 
 [[package]]
 name = "fwkarq"
-version = "1.1.0"
+version = "1.1.2"
 dependencies = [
  "chrono",
  "filetime",
- "fwkarq_macros 1.1.0",
  "reqwest",
  "serde",
  "serde_derive",
@@ -287,13 +286,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "fwkarq_macros"
-version = "1.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "10ba01285d51db1c37c5f6962426e51645676289d60fa611a96b934de36d1090"
-
-[[package]]
-name = "fwkarq_macros"
+name = "fwkarq_macro_rules"
 version = "1.1.1"
 
 [[package]]

@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["./core", "./macros"]
+members = ["./core", "./macro_rules"]
 
 
 [profile.release]
