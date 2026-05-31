@@ -8,6 +8,7 @@ license = "MIT OR Apache-2.0"
 [dependencies]
 chrono = "^0"
 filetime = "^0"
+fwkarq_macro_rules = { version = "1", optional = true }
 reqwest = { version = "^0" }
 serde = "^1"
 serde_derive = "^1"
@@ -31,3 +32,7 @@ codegen-units = 1
 strip = "symbols"
 panic = "unwind"
 opt-level = 3
+
+[features]
+default = []
+macros = ["fwkarq_macro_rules"]
