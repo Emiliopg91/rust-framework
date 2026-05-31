@@ -1,7 +1,0 @@
-warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
-package:   /var/mnt/Datos/Desarrollo/Workspace/VSCode/rust-framework/core/Cargo.toml
-workspace: /var/mnt/Datos/Desarrollo/Workspace/VSCode/rust-framework/Cargo.toml
-    Updating crates.io index
-error: no matching package named `fwkarq_macros` found
-location searched: crates.io index
-required by package `fwkarq v1.1.0 (/var/mnt/Datos/Desarrollo/Workspace/VSCode/rust-framework/core)`
