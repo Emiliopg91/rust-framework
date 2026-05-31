@@ -287,7 +287,7 @@ dependencies = [
 
 [[package]]
 name = "fwkarq_macro_rules"
-version = "1.1.1"
+version = "1.1.2"
 
 [[package]]
 name = "getrandom"
