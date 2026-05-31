@@ -294,7 +294,7 @@ checksum = "d153f0e24bdf308d30aa83314f893abbce1bf19a930a3fe1a27b048e96620b2e"
 
 [[package]]
 name = "fwkarq_macro_rules"
-version = "1.1.3"
+version = "1.1.4"
 
 [[package]]
 name = "getrandom"
