@@ -7,5 +7,5 @@ pub mod shell;
 pub mod translator;
 pub mod utils;
 
-#[cfg(feature = "macros")]
+#[cfg(feature = "macro_rules")]
 pub use fwkarq_macro_rules::*;

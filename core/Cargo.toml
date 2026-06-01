@@ -35,4 +35,4 @@ opt-level = 3
 
 [features]
 default = []
-macros_rules = ["fwkarq_macro_rules"]
+macro_rules = ["fwkarq_macro_rules"]
