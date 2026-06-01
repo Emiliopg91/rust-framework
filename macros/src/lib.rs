@@ -1,7 +1,7 @@
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{
-    Expr, Result, Token,
+    Expr, LitStr, Result, Token,
     parse::{Parse, ParseStream},
     parse_macro_input,
     punctuated::Punctuated,
@@ -9,16 +9,17 @@ use syn::{
 
 struct LogInput {
     name: Expr,
-    fmt: Expr,
+    fmt: LitStr,
     args: Punctuated<Expr, Token![,]>,
 }
 
 impl Parse for LogInput {
     fn parse(input: ParseStream) -> Result<Self> {
         let name = input.parse::<Expr>()?;
+
         input.parse::<Token![,]>()?;
 
-        let fmt = input.parse::<Expr>()?;
+        let fmt = input.parse::<LitStr>()?;
 
         let args = if input.peek(Token![,]) {
             input.parse::<Token![,]>()?;
@@ -36,23 +37,13 @@ fn expand(method: &str, input: TokenStream) -> TokenStream {
     let method = syn::Ident::new(method, proc_macro2::Span::call_site());
     let args_list = args.into_iter().collect::<Vec<_>>();
 
-    let expanded = if args_list.is_empty() {
-        quote! {
-            fwkarq::logger::provider::Provider::get_logger(#name)
-                .#method(
-                    #fmt.to_string()
-                );
-        }
-    } else {
-        quote! {
-            fwkarq::logger::provider::Provider::get_logger(#name)
-                .#method(
-                    format!(#fmt, #(#args_list),*)
-                );
-        }
-    };
-
-    expanded.into()
+    quote! {
+        fwkarq::logger::provider::Provider::get_logger(#name)
+            .#method(
+                format!(#fmt, #(#args_list),*)
+            );
+    }
+    .into()
 }
 
 #[proc_macro]
