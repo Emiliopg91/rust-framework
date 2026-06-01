@@ -1,6 +1,6 @@
 [package]
 name = "fwkarq"
-version = "1.2.2"
+version = "1.2.3"
 edition = "2024"
 description = "Basic framework for project scaffolding"
 license = "MIT OR Apache-2.0"
@@ -20,6 +20,7 @@ tokio = { version = "^1", features = [
     "macros",
     "rt-multi-thread",
     "process",
+    "sync",
     "io-util",
 ] }
 toml = { version = "^1", optional = true }
