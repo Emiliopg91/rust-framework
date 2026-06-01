@@ -275,7 +275,7 @@ version = "1.2.0"
 dependencies = [
  "chrono",
  "filetime",
- "fwkarq_macros 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "fwkarq_macros 1.2.0",
  "reqwest",
  "serde",
  "serde_derive",
@@ -289,6 +289,8 @@ dependencies = [
 [[package]]
 name = "fwkarq_macros"
 version = "1.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f9c14b5e0674cc2ecd960cc127a04f8202e7639565ef2651f51856e56014043c"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -297,9 +299,7 @@ dependencies = [
 
 [[package]]
 name = "fwkarq_macros"
-version = "1.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f9c14b5e0674cc2ecd960cc127a04f8202e7639565ef2651f51856e56014043c"
+version = "1.2.1"
 dependencies = [
  "proc-macro2",
  "quote",
