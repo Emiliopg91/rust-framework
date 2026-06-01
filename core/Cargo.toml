@@ -1,6 +1,6 @@
 [package]
 name = "fwkarq"
-version = "1.2.0"
+version = "1.2.2"
 edition = "2024"
 description = "Basic framework for project scaffolding"
 license = "MIT OR Apache-2.0"
@@ -8,20 +8,21 @@ license = "MIT OR Apache-2.0"
 [dependencies]
 chrono = "^0"
 filetime = "^0"
-fwkarq_macros = { version = "1", optional = true }
-reqwest = { version = "^0" }
-serde = "^1"
-serde_derive = "^1"
-serde_json = "^1"
-serde_yaml = "^0"
+fwkarq_macros = { version = "^1", optional = true }
+reqwest = { version = "^0", optional = true }
+serde = { version = "^1", optional = true }
+serde_derive = { version = "^1", optional = true }
+serde_json = { version = "^1", optional = true }
+serde_yaml = { version = "^0", optional = true }
 thiserror = "^2"
 tokio = { version = "^1", features = [
     "fs",
     "macros",
     "rt-multi-thread",
     "process",
+    "io-util",
 ] }
-toml = "^1"
+toml = { version = "^1", optional = true }
 
 [lib]
 doctest = false
@@ -36,3 +37,9 @@ opt-level = 3
 [features]
 default = []
 macros = ["fwkarq_macros"]
+serialization = ["serde", "serde_derive", "serde_json", "serde_yaml", "toml"]
+event_bus = []
+rest_client = ["reqwest"]
+shell = []
+settings = []
+translation = []
