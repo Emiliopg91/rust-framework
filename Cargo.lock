@@ -275,7 +275,7 @@ version = "1.1.4"
 dependencies = [
  "chrono",
  "filetime",
- "fwkarq_macro_rules 1.1.2",
+ "fwkarq_macro_rules",
  "reqwest",
  "serde",
  "serde_derive",
@@ -293,8 +293,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d153f0e24bdf308d30aa83314f893abbce1bf19a930a3fe1a27b048e96620b2e"
 
 [[package]]
-name = "fwkarq_macro_rules"
-version = "1.1.5"
+name = "fwkarq_macros"
+version = "1.2.0"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
 
 [[package]]
 name = "getrandom"

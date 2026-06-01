@@ -1,0 +1,14 @@
+[package]
+name = "fwkarq_macros"
+version = "1.2.0"
+edition = "2024"
+description = "Basic framework for project scaffolding"
+license = "MIT OR Apache-2.0"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "2", features = ["full"] }
+quote = "1"
+proc-macro2 = "1"
