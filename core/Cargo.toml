@@ -1,6 +1,6 @@
 [package]
 name = "fwkarq"
-version = "1.1.3"
+version = "1.1.4"
 edition = "2024"
 description = "Basic framework for project scaffolding"
 license = "MIT OR Apache-2.0"
